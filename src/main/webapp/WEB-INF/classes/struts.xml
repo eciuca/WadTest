@@ -1,0 +1,20 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.objectFactory" value="spring" />
+    
+    <package name="default" extends="struts-default">
+<!--        <action name="login" class="fils.wad.team4.emuseum.action.LoginAction">
+            <result name="success">/index.jsp</result>
+            <result name="input">/login.jsp</result>
+        </action>-->
+        
+        <action name="listUsers" class="fils.wad.team4.emuseum.action.UserAction"
+                method="listUsers">
+            <result name="success">/listUsers.jsp</result>
+            <result name="input">/login.jsp</result>
+        </action>
+    </package>
+    
+</struts>
